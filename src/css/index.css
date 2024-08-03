@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    left: -250px; /* Скрыть по умолчанию */
+    transition: left 0.3s ease;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрировать элементы */
+    margin-bottom: 20px;
+}
+
+.navbar-item {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navbar-item:hover {
+    background-color: #575757;
+}
+
+.burger {
+    font-size: 30px;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    display: none; /* Скрыть бургер по умолчанию */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+@media (max-width: 1080px) {
+    .navbar {
+        left: -250px; /* Скрыть навбар по умолчанию */
+    }
+
+    .burger {
+        display: block; /* Показать бургер-меню */
+    }
+
+    .navbar.active {
+        left: 0; /* Показать навбар */
+    }
+}
+
+@media (min-width: 1080px) {
+    .burger {
+        display: none; /* Скрыть бургер-меню */
+    }
+
+    .navbar {
+        left: 0; /* Показать навбар при ширине больше 1080px */
+    }
+}
