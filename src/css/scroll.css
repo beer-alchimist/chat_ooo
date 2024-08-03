@@ -1,0 +1,25 @@
+.scroll_container_chat {
+    width: 100%;
+    max-height: 610px;
+    overflow-y: auto;
+    border: 2px solid #ccc;
+    padding: 10px;
+    border-radius: 1px solid rgba(229, 229, 229, 1); 
+    background-color: rgba(229, 229, 229, 1);
+}
+
+.scroll_item {
+    min-height: 50px;        
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;  
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.scroll_container_dialog {
+    max-height: 745px;
+    overflow-y: auto;  
+    border: 2px solid #ccc; 
+    padding: 10px;
+    border-radius: 1px solid rgb(255, 255, 255); 
+}

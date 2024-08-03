@@ -1,0 +1,9 @@
+@media screen and (max-width: 1100px){
+    #chat_dekstop{
+        display: none;
+    }
+
+    #chat_laptop{
+        display: block !important;
+    }
+}

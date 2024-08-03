@@ -1,0 +1,13 @@
+.navbar{
+    background-color: rgba(229, 229, 229, 1);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 110px;
+    height: 100vh;
+}
+
+.nav-item{
+    padding: 15px 10px;
+    cursor: pointer;
+}
