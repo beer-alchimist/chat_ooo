@@ -42,6 +42,22 @@ function sendMessage() {
                 break;
             };
 
+            case 'hi':{
+                setTimeout(()=>{
+                    chatBody.innerHTML += `<div class='text-end mt-2'><div class='message_bot_container'><span>Здравствуйте я ваш индивидуальный помошник</span></div><div><span>${currentDate.getHours()}:${currentDate.getMinutes()}</span></div></div>`;
+                    chatBody.scrollTop = chatBody.scrollHeight;
+                },300);
+                break;
+            };
+
+            case 'hello':{
+                setTimeout(()=>{
+                    chatBody.innerHTML += `<div class='text-end mt-2'><div class='message_bot_container'><span>Здравствуйте я ваш индивидуальный помошник</span></div><div><span>${currentDate.getHours()}:${currentDate.getMinutes()}</span></div></div>`;
+                    chatBody.scrollTop = chatBody.scrollHeight;
+                },300);
+                break;
+            };
+
             default:{
                 setTimeout(()=>{
                     chatBody.innerHTML += `<div class='text-end mt-2'><div class='message_bot_container'><span>Простите, не могу помочь вам в этом вопросе. Ищу специалиста готового помочь.</span></div><div><span>${currentDate.getHours()}:${currentDate.getMinutes()}</span></div></div>`;
