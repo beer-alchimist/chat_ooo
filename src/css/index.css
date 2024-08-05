@@ -12,7 +12,7 @@ body {
     height: 100%;
     background-color: var(--background-navbar);
     position: fixed;
-    display: flex;
+    display: block;
     flex-direction: column;
     left: -250px; /* Скрыть по умолчанию */
     transition: left 0.3s ease;
@@ -26,7 +26,7 @@ body {
     flex-direction: column;
     align-items: center; /* Центрировать элементы */
     margin-bottom: 20px;
-    align-items: last baseline;
+    align-items: center !important;
 }
 
 .navbar-item {
@@ -43,14 +43,42 @@ body {
 
 .burger {
     font-size: 30px;
-    /*background-color: #333;*/
     color: black;
     padding: 0px;
     cursor: pointer;
-    display: none; /* Скрыть бургер по умолчанию */
+    display: none;
     position: absolute;
     top: 10px;
     left: 10px;
+}
+
+.form-switch{
+    padding-left: 2.8rem;
+}
+
+#dialog{
+    padding-left: 2rem;
+}
+
+.img_user_icon{
+    width: 80px;
+    height: 80px;
+}
+
+.scroll_item{
+    min-height: 50px;        
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;  
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.link_filter_disabled{
+    width: 71px;
+    height: 13px;
+    font-size: 18px;
+    text-decoration: none;
+    color: rgba(229, 229, 229, 1);
 }
 
 @media (max-width: 1080px) {
