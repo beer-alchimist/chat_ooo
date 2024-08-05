@@ -8,10 +8,10 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="./src/css/index.css">
-        <script src="./src/js/index.js"></script>
-        <script src="./src/js/bot.js"></script>
     </head>
     <body>
+        <!--pc-->
+
         <!--navbar-->
         <div class="navbar" id="navbar">
             <div class="navbar-section">
@@ -45,6 +45,9 @@
         </div>
         <!--/navbar-->
 
+        <!--pc-->
+
+        <!--menu-->
         <div class="container" id="dialog">
             <div class="row">
                 <!--dialogs-->
@@ -55,14 +58,14 @@
                             <h4>Диалоги</h4>
                         </div>
                         <div class="d-flex justify-content-between text-reset">
-                            <div>
-                                <span>Новые</span>
+                            <div class="link_text">
+                                <span id="filter_new" onclick="inp_activ(id)">Новые</span>
                             </div>
-                            <div>
-                                <span>Старые</span>
+                            <div class="link_text">
+                                <span id="filter_old" onclick="inp_activ(id)">Старые</span>
                             </div>
-                            <div>
-                                <span>Все</span>
+                            <div class="link_text" >
+                                <span id="filter_all" onclick="inp_activ(id)">Все</span>
                             </div>
                         </div>
                         <div class="d-flex justify-content-between">
@@ -187,6 +190,7 @@
                     <div id="dialogs_window">
                         <!--header-->
                         <div class="d-flex justify-content-between">
+                            <button class="btn btn-secondary rounded-pill btn_close_chat" onclick="close_chat('chat_1')"><span class="fw-bold"><i class="bi bi-arrow-left"></i></span></button>
                             <div class="mt-3">
                                 <h4>Иван Иванов</h4>
                             </div>
@@ -360,6 +364,7 @@
                     <div id="dialogs_window">
                         <!--header-->
                         <div class="d-flex justify-content-between">
+                            <button class="btn btn-secondary rounded-pill btn_close_chat" onclick="close_chat('chat_2')"><span class="fw-bold"><i class="bi bi-arrow-left"></i></span></button>
                             <div class="mt-3">
                                 <h4>Иван Иванов</h4>
                             </div>
@@ -495,6 +500,7 @@
                     <div id="dialogs_window">
                         <!--header-->
                         <div class="d-flex justify-content-between">
+                            <button class="btn btn-secondary rounded-pill btn_close_chat" onclick="close_chat('chat_3')"><span class="fw-bold"><i class="bi bi-arrow-left"></i></span></button>
                             <div class="mt-3">
                                 <h4>Иван Иванов</h4>
                             </div>
@@ -630,6 +636,7 @@
                     <div id="dialogs_window">
                         <!--header-->
                         <div class="d-flex justify-content-between">
+                            <button class="btn btn-secondary rounded-pill btn_close_chat" onclick="close_chat('chat_4')"><span class="fw-bold"><i class="bi bi-arrow-left"></i></span></button>
                             <div class="mt-3">
                                 <h4>Иван Иванов</h4>
                             </div>
@@ -806,5 +813,783 @@
                 <!--/patern-->
             </div>
         </div>
+        <!--/menu-->
+
+        <!--/pc-->
+
+        <!--mobile-->
+
+        <!--menu-->
+        <div class="container" id="dialog_2">
+            <div class="row">
+                <!--dialogs-->
+                <div class="col-12">
+                    <div>
+                        <!--header-->
+                        <div>
+                            <h4>Диалоги</h4>
+                        </div>
+                        <div class="d-flex justify-content-between text-reset">
+                            <div class="link_text">
+                                <span id="filter_new" onclick="inp_activ(id)">Новые</span>
+                            </div>
+                            <div class="link_text">
+                                <span id="filter_old" onclick="inp_activ(id)">Старые</span>
+                            </div>
+                            <div class="link_text" >
+                                <span id="filter_all" onclick="inp_activ(id)">Все</span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <input type="text" class="form-control form-control-sm"/>
+                            </div>
+                            <div>
+                                <span>filter (2)</span>
+                            </div>
+                        </div>
+                        <!--/header-->
+
+                        <!--dialogs-->
+                        <div class="scroll_container_dialog">
+                            <!--dialog-->
+                            <div onclick="open_chat('chat_1')" class="scrol_dialog_curs">
+                                <div class="scroll_item">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="mt-3">
+                                            <img src="./src/img/dialog_user/80f51b6c56e823d0b10e19cddbc6ed3d.jpeg" alt="" class="img_user_icon rounded-pill">
+                                        </div>
+                                        <div class="mx-1">
+                                            <!--/user_name_and_last_name-->
+                                            <div>
+                                            <span class="link_filter_active fw-bold">Иван Иванов</span>
+                                            </div>
+                                            <!--/user_name_and_last_name-->
+                        
+                                            <!--user_message-->
+                                            <div>
+                                            <span class=" " >Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения<span>
+                                            </div>
+                                            <!--/user_message-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/dialog-->
+
+                            <!--dialog-->
+                            <div onclick="open_chat('chat_2')" class="scrol_dialog_curs">
+                                <div class="scroll_item">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="mt-3">
+                                            <img src="./src/img/dialog_user/80f51b6c56e823d0b10e19cddbc6ed3d.jpeg" alt="" class="img_user_icon rounded-pill">
+                                        </div>
+                                        <div class="mx-1">
+                                            <!--/user_name_and_last_name-->
+                                            <div>
+                                            <span class="link_filter_active fw-bold">Иван Иванов</span>
+                                            </div>
+                                            <!--/user_name_and_last_name-->
+                        
+                                            <!--user_message-->
+                                            <div>
+                                            <span class=" " >Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения<span>
+                                            </div>
+                                            <!--/user_message-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/dialog-->
+
+                            <!--dialog-->
+                            <div onclick="open_chat('chat_3')" class="scrol_dialog_curs">
+                                <div class="scroll_item">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="mt-3">
+                                            <img src="./src/img/dialog_user/80f51b6c56e823d0b10e19cddbc6ed3d.jpeg" alt="" class="img_user_icon rounded-pill">
+                                        </div>
+                                        <div class="mx-1">
+                                            <!--/user_name_and_last_name-->
+                                            <div>
+                                            <span class="link_filter_active fw-bold">Иван Иванов</span>
+                                            </div>
+                                            <!--/user_name_and_last_name-->
+                        
+                                            <!--user_message-->
+                                            <div>
+                                            <span class=" " >Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения<span>
+                                            </div>
+                                            <!--/user_message-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/dialog-->
+
+                            <!--dialog-->
+                            <div onclick="open_chat('chat_4')" class="scrol_dialog_curs">
+                                <div class="scroll_item">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="mt-3">
+                                            <img src="./src/img/dialog_user/80f51b6c56e823d0b10e19cddbc6ed3d.jpeg" alt="" class="img_user_icon rounded-pill">
+                                        </div>
+                                        <div class="mx-1">
+                                            <!--/user_name_and_last_name-->
+                                            <div>
+                                            <span class="link_filter_active fw-bold">Иван Иванов</span>
+                                            </div>
+                                            <!--/user_name_and_last_name-->
+                        
+                                            <!--user_message-->
+                                            <div>
+                                            <span class=" " >Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения<span>
+                                            </div>
+                                            <!--/user_message-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/dialog-->
+                        </div>
+                        <!--dialogs-->
+                    </div>
+                </div>
+                <!--/dialogs-->
+
+                <!--chat-->
+                <div class="col-6 chat" id="chat_1">
+                    <div id="dialogs_window">
+                        <!--header-->
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-secondary rounded-pill btn_close_chat" onclick="close_chat('chat_1')"><span class="fw-bold"><i class="bi bi-arrow-left"></i></span></button>
+                            <div class="mt-3">
+                                <h4>Иван Иванов</h4>
+                            </div>
+                            <div class="d-flex justify-content-around">
+                                <div><img src="./src/img/chat_icons/button 1.svg" alt="" srcset=""></div>
+                                <div><img src="./src/img/chat_icons/button 2.svg" alt="" srcset=""></div>
+                                <div><img src="./src/img/chat_icons/button 3.svg" alt="" srcset=""></div>
+                            </div>
+                        </div>
+                        <!--/header-->
+
+                        <!--text_block-->
+                        <div class="scroll_container_dialog_chat">
+                            <!--user-->
+                            <div class="scroll_item rounded-3">
+                                <div class="d-flex justify-content-between">
+                                    <div class="mt-3">
+                                        <img src="./src/img/dialog_user/80f51b6c56e823d0b10e19cddbc6ed3d.jpeg" alt="" class="img_user_chat rounded-pill">
+                                    </div>
+                                    <div class="mx-1">
+                                        <!--/user_name_and_last_name-->
+                                        <div>
+                                          <span class="link_filter_active fw-bold">Иван Иванов</span>
+                                        </div>
+                                        <!--/user_name_and_last_name-->
+                      
+                                        <!--user_message-->
+                                        <div>
+                                            <span class=" " >
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения. 
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили.
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения.
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения.
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения.
+                                            <span>
+                                        </div>
+                                        <!--/user_message-->
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/user-->
+
+                            <!--manager-->
+                            <div class="scroll_item rounded-3">
+                                <div class="d-flex justify-content-between">
+                                    <div class="mt-3">
+                                        <img src="./src/img/dialog_user/a707a40f35caeea4be44ae190a70e9bc.jpeg" alt="" class="img_user_chat rounded-pill">
+                                    </div>
+                                    <div class="mx-1">
+                                        <!--/user_name_and_last_name-->
+                                        <div>
+                                          <span class="link_filter_active fw-bold">Иван Иванов</span>
+                                        </div>
+                                        <!--/user_name_and_last_name-->
+                      
+                                        <!--user_message-->
+                                        <div>
+                                            <span class=" " >
+                                                Здравствуйте, (имя клиента)! В настоящее время мы работаем над вашим заказом (номер заказа), и, к сожалению, он ещё не обновлён. Мы сообщим вам, как только получим обновлённую информацию
+                                            <span>
+                                        </div>
+                                        <!--/user_message-->
+                                    </div>
+                                </div>
+                            </div>
+                            <!--manager-->
+
+                            <!--user-->
+                            <div class="scroll_item rounded-3">
+                                <div class="d-flex justify-content-between">
+                                    <div class="mt-3">
+                                        <img src="./src/img/dialog_user/80f51b6c56e823d0b10e19cddbc6ed3d.jpeg" alt="" class="img_user_chat rounded-pill">
+                                    </div>
+                                    <div class="mx-1">
+                                        <!--/user_name_and_last_name-->
+                                        <div>
+                                          <span class="link_filter_active fw-bold">Иван Иванов</span>
+                                        </div>
+                                        <!--/user_name_and_last_name-->
+                      
+                                        <!--user_message-->
+                                        <div>
+                                            <span class=" " >
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения. 
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили.
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения.
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения.
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения.
+                                            <span>
+                                        </div>
+                                        <!--/user_message-->
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/user-->
+
+                            <!--manager-->
+                            <div class="scroll_item rounded-3">
+                                <div class="d-flex justify-content-between">
+                                    <div class="mt-3">
+                                        <img src="./src/img/dialog_user/a707a40f35caeea4be44ae190a70e9bc.jpeg" alt="" class="img_user_chat rounded-pill">
+                                    </div>
+                                    <div class="mx-1">
+                                        <!--/user_name_and_last_name-->
+                                        <div>
+                                          <span class="link_filter_active fw-bold">Иван Иванов</span>
+                                        </div>
+                                        <!--/user_name_and_last_name-->
+                      
+                                        <!--user_message-->
+                                        <div>
+                                            <span class=" " >
+                                                Здравствуйте, (имя клиента)! В настоящее время мы работаем над вашим заказом (номер заказа), и, к сожалению, он ещё не обновлён. Мы сообщим вам, как только получим обновлённую информацию
+                                            <span>
+                                        </div>
+                                        <!--/user_message-->
+                                    </div>
+                                </div>
+                            </div>
+                            <!--manager-->
+                        </div>
+                        <!--/text_block-->
+
+                        <!--btn_block-->
+                        <div class="chat_button_message mt-2">
+                            <!--button-->
+                            <div class="d-flex justify-content-around chat_btn mt-2" id="btn_container">
+                                <div class="">
+                                  <button type="button" class="btn btn-secondary rounded-pill text-white chat_btn_active">
+                                    <span class="fw-bold">Чат</span>
+                                  </button>
+                                </div>
+              
+                                <div class="mt-2">
+                                  <button type="button" class="btn btn-secondary rounded-pill text-white chat_btn_disabled" id="notes" onclick="inp_activ(id)">
+                                    <span class="fw-bold">Примечание</span>
+                                  </button>
+                                </div>
+              
+                                <div class="mt-2">
+                                  <button type="button" class="btn btn-secondary rounded-pill text-white chat_btn_disabled" id="comment" onclick="inp_activ(id)">
+                                    <span class="fw-bold">Комментарий</span>
+                                  </button>
+                                </div>
+              
+                                <div class="mt-2">
+                                  <button type="button" class="btn btn-secondary rounded-pill text-white chat_btn_disabled" id="history_caht" onclick="inp_activ(id)">
+                                    <span class="fw-bold">История чата</span>
+                                  </button>
+                                </div>
+              
+                                <div class="">
+                                  <button type="button" class="btn btn-secondary rounded-pill text-white chat_btn_active_plus">
+                                    <i class="bi bi-plus fw-bold"></i>
+                                  </button>
+                                </div>
+                            </div>
+                            <!--/button-->
+                            <div class="mt-2">
+                              <textarea name="" id="" class="rounded-3"></textarea>
+                            </div>
+                          </div>
+                          <!--user_case-->
+                        <!--/btn_block-->
+                    </div>
+                </div>
+                <!--chat-->
+
+                <!--chat-->
+                <div class="col-6 chat" id="chat_2">
+                    <div id="dialogs_window">
+                        <!--header-->
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-secondary rounded-pill btn_close_chat" onclick="close_chat('chat_2')"><span class="fw-bold"><i class="bi bi-arrow-left"></i></span></button>
+                            <div class="mt-3">
+                                <h4>Иван Иванов</h4>
+                            </div>
+                            <div class="d-flex justify-content-around">
+                                <div><img src="./src/img/chat_icons/button 1.svg" alt="" srcset=""></div>
+                                <div><img src="./src/img/chat_icons/button 2.svg" alt="" srcset=""></div>
+                                <div><img src="./src/img/chat_icons/button 3.svg" alt="" srcset=""></div>
+                            </div>
+                        </div>
+                        <!--/header-->
+
+                        <!--text_block-->
+                        <div class="scroll_container_dialog">
+                            <!--user-->
+                            <div class="scroll_item rounded-3">
+                                <div class="d-flex justify-content-between">
+                                    <div class="mt-3">
+                                        <img src="./src/img/dialog_user/80f51b6c56e823d0b10e19cddbc6ed3d.jpeg" alt="" class="img_user_chat rounded-pill">
+                                    </div>
+                                    <div class="mx-1">
+                                        <!--/user_name_and_last_name-->
+                                        <div>
+                                          <span class="link_filter_active fw-bold">Иван Иванов</span>
+                                        </div>
+                                        <!--/user_name_and_last_name-->
+                      
+                                        <!--user_message-->
+                                        <div>
+                                            <span class=" " >
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения. 
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили.
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения.
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения.
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения.
+                                            <span>
+                                        </div>
+                                        <!--/user_message-->
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/user-->
+
+                            <!--manager-->
+                            <div class="scroll_item rounded-3">
+                                <div class="d-flex justify-content-between">
+                                    <div class="mt-3">
+                                        <img src="./src/img/dialog_user/a707a40f35caeea4be44ae190a70e9bc.jpeg" alt="" class="img_user_chat rounded-pill">
+                                    </div>
+                                    <div class="mx-1">
+                                        <!--/user_name_and_last_name-->
+                                        <div>
+                                          <span class="link_filter_active fw-bold">Иван Иванов</span>
+                                        </div>
+                                        <!--/user_name_and_last_name-->
+                      
+                                        <!--user_message-->
+                                        <div>
+                                            <span class=" " >
+                                                Здравствуйте, (имя клиента)! В настоящее время мы работаем над вашим заказом (номер заказа), и, к сожалению, он ещё не обновлён. Мы сообщим вам, как только получим обновлённую информацию
+                                            <span>
+                                        </div>
+                                        <!--/user_message-->
+                                    </div>
+                                </div>
+                            </div>
+                            <!--manager-->
+
+                            <!--user-->
+                            <div class="scroll_item rounded-3">
+                                <div class="d-flex justify-content-between">
+                                    <div class="mt-3">
+                                        <img src="./src/img/dialog_user/80f51b6c56e823d0b10e19cddbc6ed3d.jpeg" alt="" class="img_user_chat rounded-pill">
+                                    </div>
+                                    <div class="mx-1">
+                                        <!--/user_name_and_last_name-->
+                                        <div>
+                                          <span class="link_filter_active fw-bold">Иван Иванов</span>
+                                        </div>
+                                        <!--/user_name_and_last_name-->
+                      
+                                        <!--user_message-->
+                                        <div>
+                                            <span class=" ">
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения. 
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили.
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения.
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения.
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения.
+                                            <span>
+                                        </div>
+                                        <!--/user_message-->
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/user-->
+
+                            <!--manager-->
+                            <div class="scroll_item rounded-3">
+                                <div class="d-flex justify-content-between">
+                                    <div class="mt-3">
+                                        <img src="./src/img/dialog_user/a707a40f35caeea4be44ae190a70e9bc.jpeg" alt="" class="img_user_chat rounded-pill">
+                                    </div>
+                                    <div class="mx-1">
+                                        <!--/user_name_and_last_name-->
+                                        <div>
+                                          <span class="link_filter_active fw-bold">Иван Иванов</span>
+                                        </div>
+                                        <!--/user_name_and_last_name-->
+                      
+                                        <!--user_message-->
+                                        <div>
+                                            <span class=" " >
+                                                Здравствуйте, (имя клиента)! В настоящее время мы работаем над вашим заказом (номер заказа), и, к сожалению, он ещё не обновлён. Мы сообщим вам, как только получим обновлённую информацию
+                                            <span>
+                                        </div>
+                                        <!--/user_message-->
+                                    </div>
+                                </div>
+                            </div>
+                            <!--manager-->
+                        </div>
+                        <!--/text_block-->
+
+                        <!--btn_block-->
+                        <div></div>
+                        <!--/btn_block-->
+                    </div>
+                </div>
+                <!--chat-->
+
+                <!--chat-->
+                <div class="col-6 chat" id="chat_3">
+                    <div id="dialogs_window">
+                        <!--header-->
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-secondary rounded-pill btn_close_chat" onclick="close_chat('chat_3')"><span class="fw-bold"><i class="bi bi-arrow-left"></i></span></button>
+                            <div class="mt-3">
+                                <h4>Иван Иванов</h4>
+                            </div>
+                            <div class="d-flex justify-content-around">
+                                <div><img src="./src/img/chat_icons/button 1.svg" alt="" srcset=""></div>
+                                <div><img src="./src/img/chat_icons/button 2.svg" alt="" srcset=""></div>
+                                <div><img src="./src/img/chat_icons/button 3.svg" alt="" srcset=""></div>
+                            </div>
+                        </div>
+                        <!--/header-->
+
+                        <!--text_block-->
+                        <div class="scroll_container_dialog">
+                            <!--user-->
+                            <div class="scroll_item rounded-3">
+                                <div class="d-flex justify-content-between">
+                                    <div class="mt-3">
+                                        <img src="./src/img/dialog_user/80f51b6c56e823d0b10e19cddbc6ed3d.jpeg" alt="" class="img_user_chat rounded-pill">
+                                    </div>
+                                    <div class="mx-1">
+                                        <!--/user_name_and_last_name-->
+                                        <div>
+                                          <span class="link_filter_active fw-bold">Иван Иванов</span>
+                                        </div>
+                                        <!--/user_name_and_last_name-->
+                      
+                                        <!--user_message-->
+                                        <div>
+                                            <span class=" " >
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения. 
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили.
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения.
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения.
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения.
+                                            <span>
+                                        </div>
+                                        <!--/user_message-->
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/user-->
+
+                            <!--manager-->
+                            <div class="scroll_item rounded-3">
+                                <div class="d-flex justify-content-between">
+                                    <div class="mt-3">
+                                        <img src="./src/img/dialog_user/a707a40f35caeea4be44ae190a70e9bc.jpeg" alt="" class="img_user_chat rounded-pill">
+                                    </div>
+                                    <div class="mx-1">
+                                        <!--/user_name_and_last_name-->
+                                        <div>
+                                          <span class="link_filter_active fw-bold">Иван Иванов</span>
+                                        </div>
+                                        <!--/user_name_and_last_name-->
+                      
+                                        <!--user_message-->
+                                        <div>
+                                            <span class=" " >
+                                                Здравствуйте, (имя клиента)! В настоящее время мы работаем над вашим заказом (номер заказа), и, к сожалению, он ещё не обновлён. Мы сообщим вам, как только получим обновлённую информацию
+                                            <span>
+                                        </div>
+                                        <!--/user_message-->
+                                    </div>
+                                </div>
+                            </div>
+                            <!--manager-->
+
+                            <!--user-->
+                            <div class="scroll_item rounded-3">
+                                <div class="d-flex justify-content-between">
+                                    <div class="mt-3">
+                                        <img src="./src/img/dialog_user/80f51b6c56e823d0b10e19cddbc6ed3d.jpeg" alt="" class="img_user_chat rounded-pill">
+                                    </div>
+                                    <div class="mx-1">
+                                        <!--/user_name_and_last_name-->
+                                        <div>
+                                          <span class="link_filter_active fw-bold">Иван Иванов</span>
+                                        </div>
+                                        <!--/user_name_and_last_name-->
+                      
+                                        <!--user_message-->
+                                        <div>
+                                            <span class=" " >
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения. 
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили.
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения.
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения.
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения.
+                                            <span>
+                                        </div>
+                                        <!--/user_message-->
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/user-->
+
+                            <!--manager-->
+                            <div class="scroll_item rounded-3">
+                                <div class="d-flex justify-content-between">
+                                    <div class="mt-3">
+                                        <img src="./src/img/dialog_user/a707a40f35caeea4be44ae190a70e9bc.jpeg" alt="" class="img_user_chat rounded-pill">
+                                    </div>
+                                    <div class="mx-1">
+                                        <!--/user_name_and_last_name-->
+                                        <div>
+                                          <span class="link_filter_active fw-bold">Иван Иванов</span>
+                                        </div>
+                                        <!--/user_name_and_last_name-->
+                      
+                                        <!--user_message-->
+                                        <div>
+                                            <span class=" " >
+                                                Здравствуйте, (имя клиента)! В настоящее время мы работаем над вашим заказом (номер заказа), и, к сожалению, он ещё не обновлён. Мы сообщим вам, как только получим обновлённую информацию
+                                            <span>
+                                        </div>
+                                        <!--/user_message-->
+                                    </div>
+                                </div>
+                            </div>
+                            <!--manager-->
+                        </div>
+                        <!--/text_block-->
+
+                        <!--btn_block-->
+                        <div></div>
+                        <!--/btn_block-->
+                    </div>
+                </div>
+                <!--chat-->
+
+                <!--chat-->
+                <div class="col-6 chat" id="chat_4">
+                    <div id="dialogs_window">
+                        <!--header-->
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-secondary rounded-pill btn_close_chat" onclick="close_chat('chat_4')"><span class="fw-bold"><i class="bi bi-arrow-left"></i></span></button>
+                            <div class="mt-3">
+                                <h4>Иван Иванов</h4>
+                            </div>
+                            <div class="d-flex justify-content-around">
+                                <div><img src="./src/img/chat_icons/button 1.svg" alt="" srcset=""></div>
+                                <div><img src="./src/img/chat_icons/button 2.svg" alt="" srcset=""></div>
+                                <div><img src="./src/img/chat_icons/button 3.svg" alt="" srcset=""></div>
+                            </div>
+                        </div>
+                        <!--/header-->
+
+                        <!--text_block-->
+                        <div class="scroll_container_dialog">
+                            <!--user-->
+                            <div class="scroll_item rounded-3">
+                                <div class="d-flex justify-content-between">
+                                    <div class="mt-3">
+                                        <img src="./src/img/dialog_user/80f51b6c56e823d0b10e19cddbc6ed3d.jpeg" alt="" class="img_user_chat rounded-pill">
+                                    </div>
+                                    <div class="mx-1">
+                                        <!--/user_name_and_last_name-->
+                                        <div>
+                                          <span class="link_filter_active fw-bold">Иван Иванов</span>
+                                        </div>
+                                        <!--/user_name_and_last_name-->
+                      
+                                        <!--user_message-->
+                                        <div>
+                                            <span class=" " >
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения. 
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили.
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения.
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения.
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения.
+                                            <span>
+                                        </div>
+                                        <!--/user_message-->
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/user-->
+
+                            <!--manager-->
+                            <div class="scroll_item rounded-3">
+                                <div class="d-flex justify-content-between">
+                                    <div class="mt-3">
+                                        <img src="./src/img/dialog_user/a707a40f35caeea4be44ae190a70e9bc.jpeg" alt="" class="img_user_chat rounded-pill">
+                                    </div>
+                                    <div class="mx-1">
+                                        <!--/user_name_and_last_name-->
+                                        <div>
+                                          <span class="link_filter_active fw-bold">Иван Иванов</span>
+                                        </div>
+                                        <!--/user_name_and_last_name-->
+                      
+                                        <!--user_message-->
+                                        <div>
+                                            <span class=" " >
+                                                Здравствуйте, (имя клиента)! В настоящее время мы работаем над вашим заказом (номер заказа), и, к сожалению, он ещё не обновлён. Мы сообщим вам, как только получим обновлённую информацию
+                                            <span>
+                                        </div>
+                                        <!--/user_message-->
+                                    </div>
+                                </div>
+                            </div>
+                            <!--manager-->
+
+                            <!--user-->
+                            <div class="scroll_item rounded-3">
+                                <div class="d-flex justify-content-between">
+                                    <div class="mt-3">
+                                        <img src="./src/img/dialog_user/80f51b6c56e823d0b10e19cddbc6ed3d.jpeg" alt="" class="img_user_chat rounded-pill">
+                                    </div>
+                                    <div class="mx-1">
+                                        <!--/user_name_and_last_name-->
+                                        <div>
+                                          <span class="link_filter_active fw-bold">Иван Иванов</span>
+                                        </div>
+                                        <!--/user_name_and_last_name-->
+                      
+                                        <!--user_message-->
+                                        <div>
+                                            <span class=" " >
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения. 
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили.
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения.
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения.
+                                            Я понял, что назвал вам неправильную цену за услугу/продукт, о которой мы... говорили. Мои извинения.
+                                            <span>
+                                        </div>
+                                        <!--/user_message-->
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/user-->
+
+                            <!--manager-->
+                            <div class="scroll_item rounded-3">
+                                <div class="d-flex justify-content-between">
+                                    <div class="mt-3">
+                                        <img src="./src/img/dialog_user/a707a40f35caeea4be44ae190a70e9bc.jpeg" alt="" class="img_user_chat rounded-pill">
+                                    </div>
+                                    <div class="mx-1">
+                                        <!--/user_name_and_last_name-->
+                                        <div>
+                                          <span class="link_filter_active fw-bold">Иван Иванов</span>
+                                        </div>
+                                        <!--/user_name_and_last_name-->
+                      
+                                        <!--user_message-->
+                                        <div>
+                                            <span class=" " >
+                                                Здравствуйте, (имя клиента)! В настоящее время мы работаем над вашим заказом (номер заказа), и, к сожалению, он ещё не обновлён. Мы сообщим вам, как только получим обновлённую информацию
+                                            <span>
+                                        </div>
+                                        <!--/user_message-->
+                                    </div>
+                                </div>
+                            </div>
+                            <!--manager-->
+                        </div>
+                        <!--/text_block-->
+
+                        <!--btn_block-->
+                        <div></div>
+                        <!--/btn_block-->
+                    </div>
+                </div>
+                <!--chat-->
+
+                <!--pattern-->
+                <div class="col-2">
+                    <div>
+                        <div class="chat-icon" id="chat-icon" onclick="toggleChat()">
+                            <i class="bi bi-chat"></i>
+                        </div>
+                
+                        <div class="chat-window" id="chat-window">
+                                <div class="chat-header">
+                                    <div>
+                                        <span id="chat-header-label-text">Напишите ваше сообщение</span>
+                                        <span id="chat-header-label-status">Операторы онлайн</span>
+                                    </div>
+                                    <div>
+                                        <img class="img_icons_bot" src="data:image/png;base64,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">
+                                    </div>
+                                    <div>
+                                        <button class="close btn_close" onclick="toggleChat()">&times;</button>
+                                    </div>
+                                </div>
+                            <div class="chat-body" id="chat-body">
+                            </div>
+                            <div class="chat-input">
+                                <div class="message-input-container">
+                                    <input type="text" id="message-input" placeholder="Введите сообщение..." oninput="handleInput()"/>
+                                    <div class="input_btn_group">
+                                        <div class="input_btn">
+                                            <div class="d-flex justify-content-around">
+                                                <button id="send-button" class="btn-dark rounded-pill btn_bot" onclick="sendMessage()" disabled>
+                                                    <i class="bi bi-arrow-right"></i>
+                                                </button>
+                    
+                                                <button id="sticker-button" class="btn btn-outline-success rounded-pill btn_bot" title="Стикеры">
+                                                    <span>😊</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/patern-->
+            </div>
+        </div>
+        <!--/menu-->
+
+        <!--/mobile-->
+        <script src="./src/js/index.js"></script>
+        <script src="./src/js/bot.js"></script>
+        <script src="./src/js/chat_func.js"></script>
     </body>
 </html>

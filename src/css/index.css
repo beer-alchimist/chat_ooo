@@ -130,9 +130,17 @@ body {
 }
 
 #dialog{
-    padding-left: 2rem;
+    padding-left: 2.3rem;
 }
 
+#dialog_2{
+    display: none;
+}
+
+.btn_close_chat{
+    width: 40px;
+    height: 35px;
+}
 .img_user_icon{
     width: 80px;
     height: 80px;
@@ -190,6 +198,10 @@ textarea{
     display: none;
 }
 
+.link_text{
+    cursor: pointer;
+}
+
 @media (max-width: 1080px) {
     .navbar {
         left: -250px; /* Скрыть навбар по умолчанию */
@@ -213,6 +225,14 @@ textarea{
 
     .chat-header{
         justify-content:space-evenly;
+    }
+
+    #dialog{
+        display: none;
+    }
+
+    #dialog_2{
+        display: block;
     }
 }
 
