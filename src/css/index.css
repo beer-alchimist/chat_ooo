@@ -60,7 +60,7 @@ body {
     width: 100%;
 }
 
-#message-input{
+#message-input,#message-input-2{
     height: 75px;
     width: 100%;
 }
@@ -308,7 +308,7 @@ textarea{
     justify-content: center;
 }
 
-#send-button:disabled{
+#send-button:disabled,#send-button-2:disabled{
     background: rgb(207, 195, 195);
     color: #000000;
     border: 1px solid  rgb(207, 195, 195) ;
